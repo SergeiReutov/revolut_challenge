@@ -1,0 +1,18 @@
+@import 'styles/Colors';
+@import 'styles/Variables';
+
+
+
+.currencyInputContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &.base {
+    background: $baseBackground;
+  }
+
+  &.quote {
+    background: $quoteBackground;
+  }
+}

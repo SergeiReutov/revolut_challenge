@@ -1,0 +1,54 @@
+@import 'styles/Colors';
+@import 'styles/Variables';
+@import 'styles/Mixins';
+
+.currenciesDropdown.MuiInput-root {
+  @include currencyInput;
+
+  .MuiSelect-icon {
+    color: $white;
+    right: -5px;
+  }
+}
+
+.currenciesDropdownMenu {
+  .MuiPaper-root {
+    border-radius: 1em;
+
+    .MuiList-root {
+      background: $darkGray;
+    }
+  }
+  
+
+  .currencyOptionItem.MuiMenuItem-root {
+    font-family: $mainFont;
+    background: $darkGray;
+
+    &:hover {
+      background: lighten($darkGray, 10%);
+    }
+  
+    .currencyIcon {
+      width: $currencyInputFontSize;
+      height: $currencyInputFontSize;
+    }
+  
+    .currencyNameContainer {
+      display: flex;
+      flex-direction: column;
+      padding-left: 1em;
+
+      .currencyCode {
+        color: $white;
+        font-size: 20px;
+        line-height: 1.4;
+      }
+
+      .currencyName {
+        color: $lightGray;
+        font-size: 14px;
+      }
+    }
+  }
+}

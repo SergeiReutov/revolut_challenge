@@ -1,0 +1,11 @@
+@import 'styles/Mixins';
+
+.currencyAmount {
+  .MuiInput-root {
+    @include currencyInput;
+
+    input {
+      text-align: right;
+    }
+  }
+}

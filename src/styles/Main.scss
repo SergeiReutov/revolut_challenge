@@ -1,0 +1,20 @@
+@import 'styles/Variables';
+
+body {
+  font-family: $mainFont;
+  margin: 0;
+
+  .main-app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    header {
+      height: 2.5em;
+    }
+
+    main {
+      flex-grow: 1;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+@import 'styles/Mixins';
+
+main.exchangeContainer {
+  @include flexCentered;
+  background: gray;
+
+  .currencyExchangeWidget {
+    position: relative;
+    width: 320px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+  
+    .exchangeHeaderContainer {
+      flex: 1 0 20%;
+      padding: 0 1em;
+    }
+  
+    .currencyInputContainer {
+      flex: 1 0 20%;
+      padding: 0 1em;
+    }
+  
+    .exchangeRateContainer {
+      flex: 1 0 15%;
+    }
+  
+    .exchangeButtonContainer {
+      flex: 1 0 25%;
+      padding: 0 1em;
+    }
+  }
+}

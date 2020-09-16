@@ -1,0 +1,53 @@
+@import 'styles/Colors';
+@import 'styles/Variables';
+@import 'styles/Mixins';
+
+.exchangeHeaderContainer {
+  background: $baseBackground;
+  border-top-left-radius: $widgetBorderRadius;
+  border-top-right-radius: $widgetBorderRadius;
+
+  .exchangeHeaderGrid {
+    padding-top: 1.2em;
+
+    .closeButtonContainer {
+      @include flexVerticalCentered;
+
+      .closeButton {
+        cursor: pointer;
+  
+        &:hover {
+          color: darken($white, 10%);
+        }
+      }
+    }
+
+    .headerTitle {
+      font-size: 1.25em;
+    }
+
+    .autoButtonContainer {
+      display: flex;
+      justify-content: flex-end;
+
+      .autoButton {
+        @include flexVerticalCentered;
+        color: $lightGray;
+        cursor: pointer;
+
+        &:hover {
+          color: lighten($lightGray, 10%);
+
+          svg {
+            color: lighten($lightBlue, 10%);
+          }
+        }
+
+        svg {
+          color: $lightBlue;
+          margin-left: 0.3em;
+        }
+      }
+    }
+  }
+}

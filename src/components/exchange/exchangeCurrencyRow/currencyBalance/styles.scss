@@ -1,0 +1,16 @@
+@import 'styles/Colors';
+@import 'styles/Variables';
+
+.currencyBalance {
+  font-size: $balanceFontSize;
+  color: $lightGray;
+  cursor: pointer;
+
+  &:hover {
+    color: lighten($lightGray, 10%);
+  }
+
+  &.isBreached {
+    color: $pink;
+  }
+}

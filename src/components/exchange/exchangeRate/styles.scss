@@ -1,0 +1,64 @@
+@import 'styles/Mixins';
+@import 'styles/Colors';
+
+@mixin absoluteExchangeRateItem {
+  position: absolute;
+  z-index: 1;
+  bottom: -0.8em;
+  background: $baseBackground;
+  border: 1px solid $quoteBackground;
+  border-radius: 1em;
+  height: 1.7em;
+  color: $darkBlue;
+
+  svg {
+    width: 0.75em;
+    height: 0.75em;
+  }
+}
+
+.exchangeRateContainer {
+  display: flex;
+  flex-direction: column;
+
+  .exchangeRateRow {
+    flex: 1 0 50%;
+    position: relative;
+
+    &.top {
+      background: $baseBackground;
+    }
+  
+    &.bottom {
+      background: $quoteBackground;
+    }
+
+    .switchCurrenciesButton {
+      @include flexCentered;
+      @include absoluteExchangeRateItem;
+      left: 0.8em;
+      width: 1.7em;
+      cursor: pointer;
+
+      &:hover {
+        svg {
+          color: lighten($darkBlue, 10%);
+        }
+      }
+    }
+
+    .exchangeRate {
+      @include flexCentered;
+      @include absoluteExchangeRateItem;
+      width: 160px;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+
+      svg {
+        margin-right: 0.4em;
+      }
+    }
+  }
+}

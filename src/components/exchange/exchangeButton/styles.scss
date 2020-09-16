@@ -1,0 +1,34 @@
+@import 'styles/Colors';
+@import 'styles/Variables';
+@import 'styles/Mixins';
+
+.exchangeButtonContainer {
+  @include flexHorizontalCentered;
+  align-items: flex-end;
+  background: $quoteBackground;
+  border-bottom-left-radius: $widgetBorderRadius;
+  border-bottom-right-radius: $widgetBorderRadius;
+
+  .exchangeButton {
+    width: 100%;
+    margin-bottom: 2em;
+    color: $white;
+    background-color: $lightBlue;
+    border-radius: 1em;
+
+    &:hover {
+      background-color: lighten($lightBlue, 10%);
+    }
+
+    .MuiButton-label {
+      text-transform: none;
+      font-family: $mainFont;
+    }
+
+    &.Mui-disabled {
+      color: $white;
+      background-color: $darkBlue;
+      opacity: 0.5;
+    }
+  }
+}
